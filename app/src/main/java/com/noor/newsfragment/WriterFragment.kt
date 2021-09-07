@@ -15,5 +15,10 @@ class WriterFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_writer, container, false)
     }
-
+    companion object {
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            CategoryFragment().apply {
+            }
+    }
 }

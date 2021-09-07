@@ -16,4 +16,10 @@ class HeadlineFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_headline, container, false)
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            CategoryFragment().apply {
+            }
+    }
 }
