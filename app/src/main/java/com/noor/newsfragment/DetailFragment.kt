@@ -22,7 +22,7 @@ class DetailFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() =
-            CategoryFragment().apply {
+            DetailFragment().apply {
             }
     }
 }

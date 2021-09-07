@@ -22,7 +22,7 @@ class WriterFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() =
-            CategoryFragment().apply {
+            WriterFragment().apply {
             }
     }
 }
