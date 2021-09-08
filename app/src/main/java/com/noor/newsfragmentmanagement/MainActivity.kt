@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity() {
     private val writerFragment6 = WriterFragment.newInstance(R.drawable.profile6, "Writer6")
     private val writerFragment7 = WriterFragment.newInstance(R.drawable.profile7, "Writer7")
     private val headlineFragment = HeadlineFragment.newInstance()
-    private val newsFragment1 = NewsFragment.newInstance()
-    private val newsFragment2 = NewsFragment.newInstance()
-    private val newsFragment3 = NewsFragment.newInstance()
-    private val newsFragment4 = NewsFragment.newInstance()
-    private val newsFragment5 = NewsFragment.newInstance()
+    private val newsFragment1 = NewsFragment.newInstance(R.drawable.news1, "News Title 1", "News Description1", "News Date 1")
+    private val newsFragment2 = NewsFragment.newInstance(R.drawable.news2, "News Title 2", "News Description2", "News Date 2")
+    private val newsFragment3 = NewsFragment.newInstance(R.drawable.news3, "News Title 3", "News Description3", "News Date 3")
+    private val newsFragment4 = NewsFragment.newInstance(R.drawable.news4, "News Title 4", "News Description4", "News Date 4")
+    private val newsFragment5 = NewsFragment.newInstance(R.drawable.news5, "News Title 5", "News Description5", "News Date 5")
     private val detailFragment = DetailFragment.newInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,8 +97,8 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.add(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
         fragmentTransaction.add(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
         fragmentTransaction.add(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
-        fragmentTransaction.add(binding.fragmentNews4.id, newsFragment3, "news_fragment4")
-        fragmentTransaction.add(binding.fragmentNews5.id, newsFragment3, "news_fragment5")
+        fragmentTransaction.add(binding.fragmentNews4.id, newsFragment4, "news_fragment4")
+        fragmentTransaction.add(binding.fragmentNews5.id, newsFragment5, "news_fragment5")
         fragmentTransaction.addToBackStack("home_bs")
         fragmentTransaction.commit()
     }

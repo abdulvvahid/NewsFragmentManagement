@@ -1,14 +1,13 @@
 package com.noor.newsfragmentmanagement
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.noor.newsfragmentmanagement.databinding.FragmentWriterBinding
-
-private const val WRITER_IMAGE = "image"
-private const val WRITER_NAME = "name"
+import com.noor.newsfragmentmanagement.util.Constants.Companion.WRITER_IMAGE
+import com.noor.newsfragmentmanagement.util.Constants.Companion.WRITER_NAME
 
 class WriterFragment : Fragment() {
 
