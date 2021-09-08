@@ -1,4 +1,4 @@
-package com.noor.newsfragment
+package com.noor.newsfragmentmanagement
 
 import org.junit.Test
 

@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DetailFragment">
+        tools:context=".DetailFragment"
+        android:background="@android:color/holo_green_dark">
 
         <TextView
             android:layout_width="match_parent"

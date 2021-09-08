@@ -1,28 +1,28 @@
-package com.noor.newsfragment
+package com.noor.newsfragmentmanagement
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.noor.newsfragment.databinding.FragmentDetailBinding
+import com.noor.newsfragmentmanagement.databinding.FragmentNewsBinding
 
-class DetailFragment : Fragment() {
+class NewsFragment : Fragment() {
 
-    private lateinit var binding: FragmentDetailBinding
+    private lateinit var binding: FragmentNewsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDetailBinding.inflate(layoutInflater, container, false)
+        binding = FragmentNewsBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     companion object {
         @JvmStatic
         fun newInstance() =
-            DetailFragment().apply {
+            NewsFragment().apply {
             }
     }
 }

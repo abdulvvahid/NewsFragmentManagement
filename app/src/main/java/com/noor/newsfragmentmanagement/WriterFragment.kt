@@ -1,11 +1,11 @@
-package com.noor.newsfragment
+package com.noor.newsfragmentmanagement
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.noor.newsfragment.databinding.FragmentWriterBinding
+import com.noor.newsfragmentmanagement.databinding.FragmentWriterBinding
 
 class WriterFragment : Fragment() {
 

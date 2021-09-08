@@ -7,65 +7,18 @@
 
     </data>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:context=".WriterFragment">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_writer_name1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:gravity="center"
+            android:text="Valencia"
+            app:drawableTopCompat="@drawable/ic_launcher_foreground" />
 
-            <TextView
-                android:id="@+id/tv_writer_name1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Valencia"
-                app:drawableTopCompat="@drawable/ic_launcher_foreground" />
-
-            <TextView
-                android:id="@+id/tv_writer_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Valencia"
-                app:drawableTopCompat="@drawable/ic_launcher_foreground" />
-
-            <TextView
-                android:id="@+id/tv_writer_name3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Valencia"
-                app:drawableTopCompat="@drawable/ic_launcher_foreground" />
-
-            <TextView
-                android:id="@+id/tv_writer_name4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Valencia"
-                app:drawableTopCompat="@drawable/ic_launcher_foreground" />
-
-            <TextView
-                android:id="@+id/tv_writer_name5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Valencia"
-                app:drawableTopCompat="@drawable/ic_launcher_foreground" />
-
-            <TextView
-                android:id="@+id/tv_writer_name6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Valencia"
-                app:drawableTopCompat="@drawable/ic_launcher_foreground" />
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
+    </FrameLayout>
 </layout>
