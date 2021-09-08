@@ -9,6 +9,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_news"
         tools:context=".NewsFragment">
 
         <LinearLayout
@@ -19,12 +21,27 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@color/cardview_dark_background"/>
+                android:background="@drawable/bg_news_image"
+                android:src="@color/cardview_dark_background" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="asdkşasdl"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="asdkşasdl" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="b"
+                    android:text="08.09.2021"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

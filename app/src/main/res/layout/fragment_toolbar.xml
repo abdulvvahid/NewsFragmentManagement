@@ -7,31 +7,30 @@
 
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:gravity="center_vertical"
         tools:context=".ToolbarFragment">
 
         <ImageView
             android:id="@+id/iv_keko_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_marginStart="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
             android:src="@drawable/ic_logo"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
 
         <ImageView
             android:id="@+id/iv_search"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_gravity="end"
             android:layout_marginEnd="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
             android:src="@drawable/ic_search"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 </layout>
