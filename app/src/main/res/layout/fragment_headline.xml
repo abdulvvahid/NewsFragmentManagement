@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,15 +9,9 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".HeadlineFragment">
-
-        <ImageView
-            android:id="@+id/iv_headline"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@android:color/holo_blue_light"
-            android:src="@drawable/ic_launcher_foreground"/>
+        android:layout_height="200dp"
+        tools:context=".HeadlineFragment"
+        android:background="@drawable/bg_headline">
 
     </FrameLayout>
 </layout>

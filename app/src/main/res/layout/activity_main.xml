@@ -105,7 +105,8 @@
             <FrameLayout
                 android:id="@+id/fragment_news1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
 
             <FrameLayout
                 android:id="@+id/fragment_news2"
