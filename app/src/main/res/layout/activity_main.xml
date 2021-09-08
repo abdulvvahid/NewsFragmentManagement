@@ -33,32 +33,64 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
                     android:orientation="horizontal">
 
                     <FrameLayout
                         android:id="@+id/fragment_writer_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"/>
 
                     <FrameLayout
                         android:id="@+id/fragment_writer_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"/>
 
                     <FrameLayout
                         android:id="@+id/fragment_writer_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"/>
 
                     <FrameLayout
                         android:id="@+id/fragment_writer_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"/>
 
                     <FrameLayout
                         android:id="@+id/fragment_writer_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"/>
+
+                    <FrameLayout
+                        android:id="@+id/fragment_writer_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"/>
+
+                    <FrameLayout
+                        android:id="@+id/fragment_writer_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"/>
 
                 </LinearLayout>
 

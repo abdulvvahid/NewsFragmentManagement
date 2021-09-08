@@ -11,11 +11,13 @@ class MainActivity : AppCompatActivity() {
 
     private val toolbarFragment = ToolbarFragment.newInstance()
     private val categoryFragment = CategoryFragment.newInstance()
-    private val writerFragment1 = WriterFragment.newInstance()
-    private val writerFragment2 = WriterFragment.newInstance()
-    private val writerFragment3 = WriterFragment.newInstance()
-    private val writerFragment4 = WriterFragment.newInstance()
-    private val writerFragment5 = WriterFragment.newInstance()
+    private val writerFragment1 = WriterFragment.newInstance(R.drawable.profile1, "Writer1")
+    private val writerFragment2 = WriterFragment.newInstance(R.drawable.profile2, "Writer2")
+    private val writerFragment3 = WriterFragment.newInstance(R.drawable.profile3, "Writer3")
+    private val writerFragment4 = WriterFragment.newInstance(R.drawable.profile4, "Writer4")
+    private val writerFragment5 = WriterFragment.newInstance(R.drawable.profile5, "Writer5")
+    private val writerFragment6 = WriterFragment.newInstance(R.drawable.profile6, "Writer6")
+    private val writerFragment7 = WriterFragment.newInstance(R.drawable.profile7, "Writer7")
     private val headlineFragment = HeadlineFragment.newInstance()
     private val newsFragment1 = NewsFragment.newInstance()
     private val newsFragment2 = NewsFragment.newInstance()
@@ -48,6 +50,12 @@ class MainActivity : AppCompatActivity() {
             fragmentWriter5.setOnClickListener {
                 loadDetail()
             }
+            fragmentWriter6.setOnClickListener {
+                loadDetail()
+            }
+            fragmentWriter7.setOnClickListener {
+                loadDetail()
+            }
             fragmentHeadline.setOnClickListener {
                 loadDetail()
             }
@@ -75,6 +83,8 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.add(binding.fragmentWriter3.id, writerFragment3, "writer_fragment3")
         fragmentTransaction.add(binding.fragmentWriter4.id, writerFragment4, "writer_fragment4")
         fragmentTransaction.add(binding.fragmentWriter5.id, writerFragment5, "writer_fragment5")
+        fragmentTransaction.add(binding.fragmentWriter6.id, writerFragment6, "writer_fragment6")
+        fragmentTransaction.add(binding.fragmentWriter7.id, writerFragment7, "writer_fragment7")
         fragmentTransaction.add(binding.fragmentHeadline.id, headlineFragment, "headline_fragment")
         fragmentTransaction.add(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
         fragmentTransaction.add(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
@@ -92,6 +102,8 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment3")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment4")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment5")!!)
+        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment6")!!)
+        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment7")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("headline_fragment")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment1")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment2")!!)
@@ -109,6 +121,8 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(binding.fragmentWriter3.id, writerFragment3, "writer_fragment3")
         fragmentTransaction.replace(binding.fragmentWriter4.id, writerFragment4, "writer_fragment4")
         fragmentTransaction.replace(binding.fragmentWriter5.id, writerFragment5, "writer_fragment5")
+        fragmentTransaction.replace(binding.fragmentWriter6.id, writerFragment6, "writer_fragment6")
+        fragmentTransaction.replace(binding.fragmentWriter7.id, writerFragment7, "writer_fragment7")
         fragmentTransaction.replace(binding.fragmentHeadline.id, headlineFragment, "headline_fragment")
         fragmentTransaction.replace(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
         fragmentTransaction.replace(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
