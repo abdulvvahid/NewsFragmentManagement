@@ -15,6 +15,7 @@
             android:id="@+id/iv_headline"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:background="@android:color/holo_blue_light"
             android:src="@drawable/ic_launcher_foreground"/>
 
     </FrameLayout>

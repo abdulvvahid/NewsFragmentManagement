@@ -96,10 +96,11 @@
 
             </HorizontalScrollView>
 
-            <FrameLayout
-                android:id="@+id/fragment_headline"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="50dp"/>
 
             <FrameLayout
                 android:id="@+id/fragment_news1"
