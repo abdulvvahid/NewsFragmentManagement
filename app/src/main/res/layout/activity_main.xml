@@ -117,6 +117,16 @@
                 android:layout_height="wrap_content" />
 
             <FrameLayout
+                android:id="@+id/fragment_news4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/fragment_news5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
                 android:id="@+id/fragment_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

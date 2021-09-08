@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     private val newsFragment1 = NewsFragment.newInstance()
     private val newsFragment2 = NewsFragment.newInstance()
     private val newsFragment3 = NewsFragment.newInstance()
+    private val newsFragment4 = NewsFragment.newInstance()
+    private val newsFragment5 = NewsFragment.newInstance()
     private val detailFragment = DetailFragment.newInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,6 +70,12 @@ class MainActivity : AppCompatActivity() {
             fragmentNews3.setOnClickListener {
                 loadDetail()
             }
+            fragmentNews4.setOnClickListener {
+                loadDetail()
+            }
+            fragmentNews5.setOnClickListener {
+                loadDetail()
+            }
             fragmentDetail.setOnClickListener {
                 loadHome()
             }
@@ -89,6 +97,8 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.add(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
         fragmentTransaction.add(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
         fragmentTransaction.add(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
+        fragmentTransaction.add(binding.fragmentNews4.id, newsFragment3, "news_fragment4")
+        fragmentTransaction.add(binding.fragmentNews5.id, newsFragment3, "news_fragment5")
         fragmentTransaction.addToBackStack("home_bs")
         fragmentTransaction.commit()
     }
@@ -108,6 +118,8 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment1")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment2")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment3")!!)
+        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment4")!!)
+        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment5")!!)
         fragmentTransaction.replace(binding.fragmentDetail.id, detailFragment, "detail_fragment")
         fragmentTransaction.commit()
     }
@@ -127,6 +139,8 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
         fragmentTransaction.replace(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
         fragmentTransaction.replace(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
+        fragmentTransaction.replace(binding.fragmentNews4.id, newsFragment4, "news_fragment4")
+        fragmentTransaction.replace(binding.fragmentNews5.id, newsFragment5, "news_fragment5")
         fragmentTransaction.remove(detailFragment)
         fragmentTransaction.commit()
     }
