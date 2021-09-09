@@ -3,12 +3,7 @@ package com.noor.newsfragmentmanagement
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.CompositePageTransformer
-import androidx.viewpager2.widget.MarginPageTransformer
-import com.noor.newsfragmentmanagement.adapter.SliderAdapter
 import com.noor.newsfragmentmanagement.databinding.ActivityMainBinding
-import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
 
@@ -129,13 +124,12 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.add(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
         fragmentTransaction.add(binding.fragmentNews4.id, newsFragment4, "news_fragment4")
         fragmentTransaction.add(binding.fragmentNews5.id, newsFragment5, "news_fragment5")
-        fragmentTransaction.addToBackStack("home_bs")
         fragmentTransaction.commit()
-
     }
 
-    private fun loadDetail() {
+    fun loadDetail() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.addToBackStack("home_bs")
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("toolbar_fragment")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("category_fragment")!!)
         fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment1")!!)

@@ -33,6 +33,9 @@ class HeadNewsFragment : Fragment() {
         binding.apply {
             ivHeadNews.setImageResource(imageId!!)
             tvHeadNews.text = titleText
+            ivHeadNews.setOnClickListener {
+                (activity as MainActivity).loadDetail()
+            }
         }
 
         return binding.root
