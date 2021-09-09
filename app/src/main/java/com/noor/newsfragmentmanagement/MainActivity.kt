@@ -61,6 +61,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+
+        uploadClickListeners()
+
+    }
+
+    private fun uploadClickListeners() {
         binding.apply {
             fragmentWriter1.setOnClickListener {
                 loadDetail()
@@ -109,69 +115,72 @@ class MainActivity : AppCompatActivity() {
 
     private fun initFragments() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.add(binding.fragmentToolbar.id, toolbarFragment, "toolbar_fragment")
-        fragmentTransaction.add(binding.fragmentCategory.id, categoryFragment, "category_fragment")
-        fragmentTransaction.add(binding.fragmentWriter1.id, writerFragment1, "writer_fragment1")
-        fragmentTransaction.add(binding.fragmentWriter2.id, writerFragment2, "writer_fragment2")
-        fragmentTransaction.add(binding.fragmentWriter3.id, writerFragment3, "writer_fragment3")
-        fragmentTransaction.add(binding.fragmentWriter4.id, writerFragment4, "writer_fragment4")
-        fragmentTransaction.add(binding.fragmentWriter5.id, writerFragment5, "writer_fragment5")
-        fragmentTransaction.add(binding.fragmentWriter6.id, writerFragment6, "writer_fragment6")
-        fragmentTransaction.add(binding.fragmentWriter7.id, writerFragment7, "writer_fragment7")
-        fragmentTransaction.add(binding.fragmentHeadline.id, headlineFragment, "headline_fragment")
-        fragmentTransaction.add(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
-        fragmentTransaction.add(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
-        fragmentTransaction.add(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
-        fragmentTransaction.add(binding.fragmentNews4.id, newsFragment4, "news_fragment4")
-        fragmentTransaction.add(binding.fragmentNews5.id, newsFragment5, "news_fragment5")
-        fragmentTransaction.commit()
+        fragmentTransaction.apply {
+            add(binding.fragmentToolbar.id, toolbarFragment, "toolbar_fragment")
+            add(binding.fragmentCategory.id, categoryFragment, "category_fragment")
+            add(binding.fragmentWriter1.id, writerFragment1, "writer_fragment1")
+            add(binding.fragmentWriter2.id, writerFragment2, "writer_fragment2")
+            add(binding.fragmentWriter3.id, writerFragment3, "writer_fragment3")
+            add(binding.fragmentWriter4.id, writerFragment4, "writer_fragment4")
+            add(binding.fragmentWriter5.id, writerFragment5, "writer_fragment5")
+            add(binding.fragmentWriter6.id, writerFragment6, "writer_fragment6")
+            add(binding.fragmentWriter7.id, writerFragment7, "writer_fragment7")
+            add(binding.fragmentHeadline.id, headlineFragment, "headline_fragment")
+            add(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
+            add(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
+            add(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
+            add(binding.fragmentNews4.id, newsFragment4, "news_fragment4")
+            add(binding.fragmentNews5.id, newsFragment5, "news_fragment5")
+            commit()
+        }
     }
 
     fun loadDetail() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.addToBackStack("home_bs")
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("toolbar_fragment")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("category_fragment")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment1")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment2")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment3")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment4")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment5")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment6")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("writer_fragment7")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("headline_fragment")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment1")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment2")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment3")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment4")!!)
-        fragmentTransaction.remove(supportFragmentManager.findFragmentByTag("news_fragment5")!!)
-        fragmentTransaction.replace(binding.fragmentDetail.id, detailFragment, "detail_fragment")
-        fragmentTransaction.commit()
+        fragmentTransaction.apply {
+            addToBackStack("home_bs")
+            remove(supportFragmentManager.findFragmentByTag("toolbar_fragment")!!)
+            remove(supportFragmentManager.findFragmentByTag("category_fragment")!!)
+            remove(supportFragmentManager.findFragmentByTag("writer_fragment1")!!)
+            remove(supportFragmentManager.findFragmentByTag("writer_fragment2")!!)
+            remove(supportFragmentManager.findFragmentByTag("writer_fragment3")!!)
+            remove(supportFragmentManager.findFragmentByTag("writer_fragment4")!!)
+            remove(supportFragmentManager.findFragmentByTag("writer_fragment5")!!)
+            remove(supportFragmentManager.findFragmentByTag("writer_fragment6")!!)
+            remove(supportFragmentManager.findFragmentByTag("writer_fragment7")!!)
+            remove(supportFragmentManager.findFragmentByTag("headline_fragment")!!)
+            remove(supportFragmentManager.findFragmentByTag("news_fragment1")!!)
+            remove(supportFragmentManager.findFragmentByTag("news_fragment2")!!)
+            remove(supportFragmentManager.findFragmentByTag("news_fragment3")!!)
+            remove(supportFragmentManager.findFragmentByTag("news_fragment4")!!)
+            remove(supportFragmentManager.findFragmentByTag("news_fragment5")!!)
+            replace(binding.fragmentDetail.id, detailFragment, "detail_fragment")
+            commit()
+        }
+
     }
 
     private fun loadHome() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(binding.fragmentToolbar.id, toolbarFragment, "toolbar_fragment")
-        fragmentTransaction.replace(
-            binding.fragmentCategory.id,
-            categoryFragment,
-            "category_fragment"
-        )
-        fragmentTransaction.replace(binding.fragmentWriter1.id, writerFragment1, "writer_fragment1")
-        fragmentTransaction.replace(binding.fragmentWriter2.id, writerFragment2, "writer_fragment2")
-        fragmentTransaction.replace(binding.fragmentWriter3.id, writerFragment3, "writer_fragment3")
-        fragmentTransaction.replace(binding.fragmentWriter4.id, writerFragment4, "writer_fragment4")
-        fragmentTransaction.replace(binding.fragmentWriter5.id, writerFragment5, "writer_fragment5")
-        fragmentTransaction.replace(binding.fragmentWriter6.id, writerFragment6, "writer_fragment6")
-        fragmentTransaction.replace(binding.fragmentWriter7.id, writerFragment7, "writer_fragment7")
-        fragmentTransaction.replace(binding.fragmentHeadline.id, headlineFragment, "headline_fragment")
-        fragmentTransaction.replace(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
-        fragmentTransaction.replace(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
-        fragmentTransaction.replace(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
-        fragmentTransaction.replace(binding.fragmentNews4.id, newsFragment4, "news_fragment4")
-        fragmentTransaction.replace(binding.fragmentNews5.id, newsFragment5, "news_fragment5")
-        fragmentTransaction.remove(detailFragment)
-        fragmentTransaction.commit()
+        fragmentTransaction.apply {
+            replace(binding.fragmentToolbar.id, toolbarFragment, "toolbar_fragment")
+            replace(binding.fragmentCategory.id, categoryFragment, "category_fragment")
+            replace(binding.fragmentWriter1.id, writerFragment1, "writer_fragment1")
+            replace(binding.fragmentWriter2.id, writerFragment2, "writer_fragment2")
+            replace(binding.fragmentWriter3.id, writerFragment3, "writer_fragment3")
+            replace(binding.fragmentWriter4.id, writerFragment4, "writer_fragment4")
+            replace(binding.fragmentWriter5.id, writerFragment5, "writer_fragment5")
+            replace(binding.fragmentWriter6.id, writerFragment6, "writer_fragment6")
+            replace(binding.fragmentWriter7.id, writerFragment7, "writer_fragment7")
+            replace(binding.fragmentHeadline.id, headlineFragment, "headline_fragment")
+            replace(binding.fragmentNews1.id, newsFragment1, "news_fragment1")
+            replace(binding.fragmentNews2.id, newsFragment2, "news_fragment2")
+            replace(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
+            replace(binding.fragmentNews4.id, newsFragment4, "news_fragment4")
+            replace(binding.fragmentNews5.id, newsFragment5, "news_fragment5")
+            remove(detailFragment)
+            commit()
+        }
     }
 
 }

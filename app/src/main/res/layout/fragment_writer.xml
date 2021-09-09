@@ -10,19 +10,19 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".WriterFragment"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginEnd="20dp">
+        android:orientation="vertical"
+        tools:context=".WriterFragment">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_launcher_foreground"
-            app:civ_border_width="1dp"
-            app:civ_border_color="#FF000000"/>
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp" />
 
         <TextView
             android:id="@+id/tv_writer_name1"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:layout_margin="5dp"
-            android:text="Valencia"/>
+            android:text="Valencia" />
 
     </LinearLayout>
 </layout>

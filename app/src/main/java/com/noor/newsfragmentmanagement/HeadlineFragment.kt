@@ -1,10 +1,10 @@
 package com.noor.newsfragmentmanagement
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import com.noor.newsfragmentmanagement.adapter.SliderAdapter
@@ -15,11 +15,16 @@ class HeadlineFragment : Fragment() {
 
     private lateinit var binding: FragmentHeadlineBinding
 
-    private val headNewsFragment1 = HeadNewsFragment.newInstance(R.drawable.rectangle1, "Headline News 1")
-    private val headNewsFragment2 = HeadNewsFragment.newInstance(R.drawable.rectangle2, "Headline News 2")
-    private val headNewsFragment3 = HeadNewsFragment.newInstance(R.drawable.rectangle3, "Headline News 3")
-    private val headNewsFragment4 = HeadNewsFragment.newInstance(R.drawable.rectangle4, "Headline News 4")
-    private val headNewsFragment5 = HeadNewsFragment.newInstance(R.drawable.rectangle5, "Headline News 5")
+    private val headNewsFragment1 =
+        HeadNewsFragment.newInstance(R.drawable.rectangle1, "Headline News 1")
+    private val headNewsFragment2 =
+        HeadNewsFragment.newInstance(R.drawable.rectangle2, "Headline News 2")
+    private val headNewsFragment3 =
+        HeadNewsFragment.newInstance(R.drawable.rectangle3, "Headline News 3")
+    private val headNewsFragment4 =
+        HeadNewsFragment.newInstance(R.drawable.rectangle4, "Headline News 4")
+    private val headNewsFragment5 =
+        HeadNewsFragment.newInstance(R.drawable.rectangle5, "Headline News 5")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

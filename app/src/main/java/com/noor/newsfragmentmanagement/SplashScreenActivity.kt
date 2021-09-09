@@ -1,8 +1,8 @@
 package com.noor.newsfragmentmanagement
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 class SplashScreenActivity : AppCompatActivity() {
