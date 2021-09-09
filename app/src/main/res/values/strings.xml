@@ -3,4 +3,19 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="writer_name">Noor</string>
+    <string name="popular">Popular</string>
+    <string name="hot">Hot</string>
+    <string name="recommend">Recommend</string>
+    <string name="special">Special</string>
+    <string name="sport">Sport</string>
+    <string name="world">World</string>
+    <string name="economy">Economy</string>
+    <string name="detailed_image_view">Detailed Image View</string>
+    <string name="news_title">News Title</string>
+    <string name="news_desc">News Desc</string>
+    <string name="news_imageview">News ImageView</string>
+    <string name="news_description">News Description</string>
+    <string name="date">08.09.2021</string>
+    <string name="logo">Logo</string>
+    <string name="search_image">Search Image</string>
 </resources>

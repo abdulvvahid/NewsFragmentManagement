@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
+    <data />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,7 +30,7 @@
             android:background="#40000000"
             android:gravity="bottom"
             android:padding="2dp"
-            android:text="News Title"
+            android:text="@string/news_title"
             android:textColor="@color/white" />
 
     </RelativeLayout>

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data></data>
+    <data />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,6 +14,7 @@
             android:id="@+id/iv_detail"
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:contentDescription="@string/detailed_image_view"
             android:scaleType="centerCrop"
             android:src="@drawable/rectangle1" />
 
@@ -23,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:text="News Title" />
+            android:text="@string/news_title" />
 
         <TextView
             android:id="@+id/tv_detail_news_desc"
@@ -31,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:text="News Desc" />
+            android:text="@string/news_desc" />
     </LinearLayout>
 
 </layout>

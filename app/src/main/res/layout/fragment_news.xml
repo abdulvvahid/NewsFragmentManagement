@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
+    <data />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_news_image"
+            android:contentDescription="@string/news_imageview"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,34 +28,33 @@
             android:id="@+id/tv_news_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="asdkşasdl"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/news_title"
             app:layout_constraintStart_toEndOf="@+id/iv_news"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_news_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="3"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:text="Lorem Ipsum \n asdasd \n asjdkas"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/news_description"
             app:layout_constraintStart_toEndOf="@+id/iv_news"
-            app:layout_constraintTop_toBottomOf="@+id/tv_news_title"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_news_title" />
 
         <TextView
             android:id="@+id/tv_news_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="08.09.2021"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="10dp"
-            app:layout_constraintStart_toEndOf="@+id/iv_news"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:text="@string/date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_news" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>

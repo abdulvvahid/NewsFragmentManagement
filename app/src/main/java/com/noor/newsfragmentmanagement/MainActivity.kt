@@ -1,7 +1,6 @@
 package com.noor.newsfragmentmanagement
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.noor.newsfragmentmanagement.databinding.ActivityMainBinding
