@@ -24,10 +24,10 @@ class NewsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            imageId = it.getInt(Constants.NEWS_IMAGE)
-            title = it.getString(Constants.NEWS_TITLE)
-            desc = it.getString(Constants.NEWS_DESC)
-            date = it.getString(Constants.NEWS_DATE)
+            imageId = it.getInt(NEWS_IMAGE)
+            title = it.getString(NEWS_TITLE)
+            desc = it.getString(NEWS_DESC)
+            date = it.getString(NEWS_DATE)
         }
     }
 

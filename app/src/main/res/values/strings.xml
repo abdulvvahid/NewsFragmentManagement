@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">NewsFragmentManagement</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="writer_name">Noor</string>
     <string name="popular">Popular</string>
     <string name="hot">Hot</string>
