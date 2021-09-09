@@ -16,15 +16,15 @@ class HeadlineFragment : Fragment() {
     private lateinit var binding: FragmentHeadlineBinding
 
     private val headNewsFragment1 =
-        HeadNewsFragment.newInstance(R.drawable.rectangle1, "Headline News 1")
+        HeadNewsFragment.newInstance(R.drawable.rectangle1, "Headline News 1", "Desc")
     private val headNewsFragment2 =
-        HeadNewsFragment.newInstance(R.drawable.rectangle2, "Headline News 2")
+        HeadNewsFragment.newInstance(R.drawable.rectangle2, "Headline News 2", "Desc")
     private val headNewsFragment3 =
-        HeadNewsFragment.newInstance(R.drawable.rectangle3, "Headline News 3")
+        HeadNewsFragment.newInstance(R.drawable.rectangle3, "Headline News 3", "Desc")
     private val headNewsFragment4 =
-        HeadNewsFragment.newInstance(R.drawable.rectangle4, "Headline News 4")
+        HeadNewsFragment.newInstance(R.drawable.rectangle4, "Headline News 4", "Desc")
     private val headNewsFragment5 =
-        HeadNewsFragment.newInstance(R.drawable.rectangle5, "Headline News 5")
+        HeadNewsFragment.newInstance(R.drawable.rectangle5, "Headline News 5", "Desc")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

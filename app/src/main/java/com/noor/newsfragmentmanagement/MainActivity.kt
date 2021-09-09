@@ -49,63 +49,83 @@ class MainActivity : AppCompatActivity() {
         "News Description5",
         "News Date 5"
     )
-    private val detailFragment = DetailFragment.newInstance()
+    private lateinit var detailFragment: DetailFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
         initFragments()
-
     }
 
     override fun onResume() {
         super.onResume()
-
         uploadClickListeners()
-
     }
 
     private fun uploadClickListeners() {
         binding.apply {
             fragmentWriter1.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.profile1, "Writer1", "Writer1 desc")
+                loadDetail(detailFragment)
             }
             fragmentWriter2.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.profile2, "Writer2", "Writer2 desc")
+                loadDetail(detailFragment)
             }
             fragmentWriter3.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.profile3, "Writer3", "Writer3 desc")
+                loadDetail(detailFragment)
             }
             fragmentWriter4.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.profile4, "Writer4", "Writer4 desc")
+                loadDetail(detailFragment)
             }
             fragmentWriter5.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.profile5, "Writer5", "Writer5 desc")
+                loadDetail(detailFragment)
             }
             fragmentWriter6.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.profile6, "Writer6", "Writer6 desc")
+                loadDetail(detailFragment)
             }
             fragmentWriter7.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.profile7, "Writer7", "Writer7 desc")
+                loadDetail(detailFragment)
             }
             fragmentHeadline.setOnClickListener {
-                loadDetail()
+                // View pager
             }
             fragmentNews1.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.news1, "News1 Title", "News1 desc")
+                loadDetail(detailFragment)
             }
             fragmentNews2.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.news2, "News2 Title", "News2 desc")
+                loadDetail(detailFragment)
             }
             fragmentNews3.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.news3, "News3 Title", "News3 desc")
+                loadDetail(detailFragment)
             }
             fragmentNews4.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.news4, "News4 Title", "News4 desc")
+                loadDetail(detailFragment)
             }
             fragmentNews5.setOnClickListener {
-                loadDetail()
+                detailFragment =
+                    DetailFragment.newInstance(R.drawable.news5, "News5 Title", "News5 desc")
+                loadDetail(detailFragment)
             }
             fragmentDetail.setOnClickListener {
                 loadHome()
@@ -135,7 +155,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun loadDetail() {
+    fun loadDetail(detail: DetailFragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.apply {
             addToBackStack("home_bs")
@@ -154,7 +174,7 @@ class MainActivity : AppCompatActivity() {
             remove(supportFragmentManager.findFragmentByTag("news_fragment3")!!)
             remove(supportFragmentManager.findFragmentByTag("news_fragment4")!!)
             remove(supportFragmentManager.findFragmentByTag("news_fragment5")!!)
-            replace(binding.fragmentDetail.id, detailFragment, "detail_fragment")
+            replace(binding.fragmentDetail.id, detail, "detail_fragment")
             commit()
         }
 

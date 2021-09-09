@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.noor.newsfragmentmanagement.databinding.FragmentHeadNewsBinding
+import com.noor.newsfragmentmanagement.util.Constants.Companion.HEAD_DESC
 import com.noor.newsfragmentmanagement.util.Constants.Companion.HEAD_IMAGE
 import com.noor.newsfragmentmanagement.util.Constants.Companion.HEAD_TITLE
 
@@ -15,12 +16,14 @@ class HeadNewsFragment : Fragment() {
 
     private var imageId: Int? = null
     private var titleText: String? = null
+    private var titleDesc: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             imageId = it.getInt(HEAD_IMAGE)
             titleText = it.getString(HEAD_TITLE)
+            titleDesc = it.getString(HEAD_DESC)
         }
     }
 
@@ -34,7 +37,8 @@ class HeadNewsFragment : Fragment() {
             ivHeadNews.setImageResource(imageId!!)
             tvHeadNews.text = titleText
             ivHeadNews.setOnClickListener {
-                (activity as MainActivity).loadDetail()
+                val detailFragment = DetailFragment.newInstance(imageId!!, titleText!!, titleDesc!!)
+                (activity as MainActivity).loadDetail(detailFragment)
             }
         }
 
@@ -44,11 +48,12 @@ class HeadNewsFragment : Fragment() {
     companion object {
 
         @JvmStatic
-        fun newInstance(headImageId: Int, headText: String) =
+        fun newInstance(headImageId: Int, headText: String, headDesc: String) =
             HeadNewsFragment().apply {
                 arguments = Bundle().apply {
                     putInt(HEAD_IMAGE, headImageId)
                     putString(HEAD_TITLE, headText)
+                    putString(HEAD_DESC, headDesc)
                 }
             }
     }
