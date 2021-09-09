@@ -6,16 +6,11 @@
 
     </data>
 
-    <FrameLayout
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        tools:context=".HeadlineFragment">
+        android:paddingHorizontal="50dp"
+        tools:context=".HeadlineFragment" />
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingHorizontal="50dp" />
-
-    </FrameLayout>
 </layout>
