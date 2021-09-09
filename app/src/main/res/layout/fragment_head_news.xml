@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HeadNewsFragment">
+
+        <ImageView
+            android:id="@+id/iv_head_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_background"
+            android:background="@drawable/bg_headline" />
+
+        <TextView
+            android:id="@+id/tv_head_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:gravity="bottom"
+            android:textColor="@color/white"
+            android:layout_alignBottom="@+id/iv_head_news"
+            android:text="News Title"/>
+
+    </RelativeLayout>
+</layout>

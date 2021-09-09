@@ -5,17 +5,57 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
+import com.noor.newsfragmentmanagement.adapter.SliderAdapter
 import com.noor.newsfragmentmanagement.databinding.FragmentHeadlineBinding
+import kotlin.math.abs
 
 class HeadlineFragment : Fragment() {
 
     private lateinit var binding: FragmentHeadlineBinding
+
+    private val headNewsFragment1 = HeadNewsFragment.newInstance()
+    private val headNewsFragment2 = HeadNewsFragment.newInstance()
+    private val headNewsFragment3 = HeadNewsFragment.newInstance()
+    private val headNewsFragment4 = HeadNewsFragment.newInstance()
+    private val headNewsFragment5 = HeadNewsFragment.newInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHeadlineBinding.inflate(layoutInflater, container, false)
+
+        val fragments = ArrayList<Fragment>()
+        fragments.add(headNewsFragment1)
+        fragments.add(headNewsFragment2)
+        fragments.add(headNewsFragment3)
+        fragments.add(headNewsFragment4)
+        fragments.add(headNewsFragment5)
+
+        val sliderAdapter = SliderAdapter(
+            fragments,
+            requireActivity()
+        )
+
+        binding.viewPager.apply {
+            adapter = sliderAdapter
+            clipToPadding = false
+            clipChildren = false
+            offscreenPageLimit = 1
+        }
+
+        val compositePagerTransformer = CompositePageTransformer()
+        compositePagerTransformer.addTransformer(MarginPageTransformer(40))
+        compositePagerTransformer.addTransformer { page, position ->
+            val r = 1 - abs(position)
+            page.scaleY = 0.85f + r * 0.15f
+        }
+
+        binding.viewPager.setPageTransformer(compositePagerTransformer)
+
         return binding.root
     }
 
