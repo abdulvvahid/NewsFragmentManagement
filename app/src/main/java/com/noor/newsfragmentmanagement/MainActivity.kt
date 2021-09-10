@@ -186,4 +186,36 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun loadPage() {
+        val fadeOut: Animation = AnimationUtils.loadAnimation(this, R.anim.fade_out)
+        binding.fragmentWriter1.startAnimation(fadeOut)
+        binding.fragmentWriter2.startAnimation(fadeOut)
+        binding.fragmentWriter3.startAnimation(fadeOut)
+        binding.fragmentWriter4.startAnimation(fadeOut)
+        binding.fragmentWriter5.startAnimation(fadeOut)
+        binding.fragmentWriter6.startAnimation(fadeOut)
+        binding.fragmentWriter7.startAnimation(fadeOut)
+        binding.fragmentHeadline.startAnimation(fadeOut)
+        binding.fragmentNews1.startAnimation(fadeOut)
+        binding.fragmentNews2.startAnimation(fadeOut)
+        binding.fragmentNews3.startAnimation(fadeOut)
+        binding.fragmentNews4.startAnimation(fadeOut)
+        binding.fragmentNews5.startAnimation(fadeOut)
+
+        val fadeIn: Animation = AnimationUtils.loadAnimation(this, R.anim.fade_in_reload)
+        binding.fragmentWriter1.startAnimation(fadeIn)
+        binding.fragmentWriter2.startAnimation(fadeIn)
+        binding.fragmentWriter3.startAnimation(fadeIn)
+        binding.fragmentWriter4.startAnimation(fadeIn)
+        binding.fragmentWriter5.startAnimation(fadeIn)
+        binding.fragmentWriter6.startAnimation(fadeIn)
+        binding.fragmentWriter7.startAnimation(fadeIn)
+        binding.fragmentHeadline.startAnimation(fadeIn)
+        binding.fragmentNews1.startAnimation(fadeIn)
+        binding.fragmentNews2.startAnimation(fadeIn)
+        binding.fragmentNews3.startAnimation(fadeIn)
+        binding.fragmentNews4.startAnimation(fadeIn)
+        binding.fragmentNews5.startAnimation(fadeIn)
+    }
+
 }

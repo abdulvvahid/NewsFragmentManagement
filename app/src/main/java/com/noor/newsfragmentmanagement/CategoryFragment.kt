@@ -10,10 +10,11 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.noor.newsfragmentmanagement.databinding.FragmentCategoryBinding
 
+var selectedText = 1
+
 class CategoryFragment : Fragment() {
 
     private lateinit var binding: FragmentCategoryBinding
-    private var selectedText = 1
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +23,7 @@ class CategoryFragment : Fragment() {
         binding = FragmentCategoryBinding.inflate(layoutInflater, container, false)
 
         loadSetClickListeners()
+        changeTextStyleBold(selectedText)
 
         return binding.root
     }
@@ -65,7 +67,7 @@ class CategoryFragment : Fragment() {
             6 -> binding.tvCategory6.changeTextStyleToBold()
             7 -> binding.tvCategory7.changeTextStyleToBold()
         }
-        loadPage()
+        (activity as MainActivity).loadPage()
     }
 
     private fun View.categoryTextClicked(num: Int) {
@@ -94,10 +96,6 @@ class CategoryFragment : Fragment() {
                 R.color.black
             )
         )
-    }
-
-    private fun loadPage() {
-        //TODO("Not yet implemented")
     }
 
 }

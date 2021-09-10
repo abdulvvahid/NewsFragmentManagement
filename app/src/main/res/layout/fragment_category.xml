@@ -22,8 +22,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/popular"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_category2"
