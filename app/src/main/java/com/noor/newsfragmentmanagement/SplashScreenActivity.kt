@@ -12,6 +12,7 @@ class SplashScreenActivity : AppCompatActivity() {
         Timer().schedule(object : TimerTask() {
             override fun run() {
                 startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                 finish()
             }
         }, 500)
