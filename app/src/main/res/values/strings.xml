@@ -16,4 +16,5 @@
     <string name="date">08.09.2021</string>
     <string name="logo">Logo</string>
     <string name="search_image">Search Image</string>
+    <string name="go_back_to_home_screen">Go back to home screen</string>
 </resources>

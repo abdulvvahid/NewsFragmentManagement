@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         "News Description5",
         "News Date 5"
     )
-    private lateinit var detailFragment: DetailFragment
+    private var detailFragment: DetailFragment = DetailFragment.newInstance(R.drawable.news1, "Detail Fragment", "Detail Desc")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             fragmentNews4.detailClicked(R.drawable.news4, "News4 Title", "News4 desc")
             fragmentNews5.detailClicked(R.drawable.news5, "News5 Title", "News5 desc")
             fragmentDetail.setOnClickListener {
-                loadHome()
+                // Detail Fragment
             }
         }
     }
@@ -143,7 +143,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun loadHome() {
+    fun loadHome(detail: DetailFragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.apply {
             replace(binding.fragmentToolbar.id, toolbarFragment, "toolbar_fragment")
@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
             replace(binding.fragmentNews3.id, newsFragment3, "news_fragment3")
             replace(binding.fragmentNews4.id, newsFragment4, "news_fragment4")
             replace(binding.fragmentNews5.id, newsFragment5, "news_fragment5")
-            remove(detailFragment)
+            remove(detail)
             commit()
         }
     }

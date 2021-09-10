@@ -37,6 +37,10 @@ class DetailFragment : Fragment() {
         binding.tvDetailNewsTitle.text = textTitle
         binding.tvDetailNewsDesc.text = textDesc
 
+        binding.ivIconBack.setOnClickListener {
+            (activity as MainActivity).loadHome(this)
+        }
+
         return binding.root
     }
 
