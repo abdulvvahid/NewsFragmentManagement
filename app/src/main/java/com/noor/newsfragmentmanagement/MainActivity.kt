@@ -1,6 +1,7 @@
 package com.noor.newsfragmentmanagement
 
 import android.os.Bundle
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
@@ -67,72 +68,31 @@ class MainActivity : AppCompatActivity() {
 
     private fun uploadClickListeners() {
         binding.apply {
-            fragmentWriter1.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.profile1, "Writer1", "Writer1 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentWriter2.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.profile2, "Writer2", "Writer2 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentWriter3.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.profile3, "Writer3", "Writer3 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentWriter4.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.profile4, "Writer4", "Writer4 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentWriter5.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.profile5, "Writer5", "Writer5 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentWriter6.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.profile6, "Writer6", "Writer6 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentWriter7.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.profile7, "Writer7", "Writer7 desc")
-                loadDetail(detailFragment)
-            }
+            fragmentWriter1.detailClicked(R.drawable.profile1, "Writer1", "Writer1 desc")
+            fragmentWriter2.detailClicked(R.drawable.profile2, "Writer2", "Writer2 desc")
+            fragmentWriter3.detailClicked(R.drawable.profile3, "Writer3", "Writer3 desc")
+            fragmentWriter4.detailClicked(R.drawable.profile4, "Writer4", "Writer4 desc")
+            fragmentWriter5.detailClicked(R.drawable.profile5, "Writer5", "Writer5 desc")
+            fragmentWriter6.detailClicked(R.drawable.profile6, "Writer6", "Writer6 desc")
+            fragmentWriter7.detailClicked(R.drawable.profile7, "Writer7", "Writer7 desc")
             fragmentHeadline.setOnClickListener {
                 // View pager
             }
-            fragmentNews1.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.news1, "News1 Title", "News1 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentNews2.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.news2, "News2 Title", "News2 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentNews3.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.news3, "News3 Title", "News3 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentNews4.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.news4, "News4 Title", "News4 desc")
-                loadDetail(detailFragment)
-            }
-            fragmentNews5.setOnClickListener {
-                detailFragment =
-                    DetailFragment.newInstance(R.drawable.news5, "News5 Title", "News5 desc")
-                loadDetail(detailFragment)
-            }
+            fragmentNews1.detailClicked(R.drawable.news1, "News1 Title", "News1 desc")
+            fragmentNews2.detailClicked(R.drawable.news2, "News2 Title", "News2 desc")
+            fragmentNews3.detailClicked(R.drawable.news3, "News3 Title", "News3 desc")
+            fragmentNews4.detailClicked(R.drawable.news4, "News4 Title", "News4 desc")
+            fragmentNews5.detailClicked(R.drawable.news5, "News5 Title", "News5 desc")
             fragmentDetail.setOnClickListener {
                 loadHome()
             }
+        }
+    }
+
+    private fun View.detailClicked(imageId: Int, title: String, desc: String) {
+        setOnClickListener {
+            detailFragment = DetailFragment.newInstance(imageId, title, desc)
+            loadDetail(detailFragment)
         }
     }
 

@@ -33,40 +33,20 @@ class CategoryFragment : Fragment() {
     }
 
     private fun loadSetClickListeners() {
-        binding.tvCategory1.setOnClickListener {
+        binding.tvCategory1.categoryTextClicked(1)
+        binding.tvCategory2.categoryTextClicked(2)
+        binding.tvCategory3.categoryTextClicked(3)
+        binding.tvCategory4.categoryTextClicked(4)
+        binding.tvCategory5.categoryTextClicked(5)
+        binding.tvCategory6.categoryTextClicked(6)
+        binding.tvCategory7.categoryTextClicked(7)
+    }
+
+    private fun View.categoryTextClicked(num : Int) {
+        setOnClickListener {
             changeTextStyleNormal()
-            changeTextStyleBold(1)
-            selectedText = 1
-        }
-        binding.tvCategory2.setOnClickListener {
-            changeTextStyleNormal()
-            changeTextStyleBold(2)
-            selectedText = 2
-        }
-        binding.tvCategory3.setOnClickListener {
-            changeTextStyleNormal()
-            changeTextStyleBold(3)
-            selectedText = 3
-        }
-        binding.tvCategory4.setOnClickListener {
-            changeTextStyleNormal()
-            changeTextStyleBold(4)
-            selectedText = 4
-        }
-        binding.tvCategory5.setOnClickListener {
-            changeTextStyleNormal()
-            changeTextStyleBold(5)
-            selectedText = 5
-        }
-        binding.tvCategory6.setOnClickListener {
-            changeTextStyleNormal()
-            changeTextStyleBold(6)
-            selectedText = 6
-        }
-        binding.tvCategory7.setOnClickListener {
-            changeTextStyleNormal()
-            changeTextStyleBold(7)
-            selectedText = 7
+            changeTextStyleBold(num)
+            selectedText = num
         }
     }
 
@@ -77,7 +57,7 @@ class CategoryFragment : Fragment() {
                 binding.tvCategory1.setTextColor(
                     ContextCompat.getColor(
                         requireContext(),
-                        R.color.white_gray
+                        R.color.gray
                     )
                 )
             }
@@ -86,7 +66,7 @@ class CategoryFragment : Fragment() {
                 binding.tvCategory2.setTextColor(
                     ContextCompat.getColor(
                         requireContext(),
-                        R.color.white_gray
+                        R.color.gray
                     )
                 )
             }
@@ -95,7 +75,7 @@ class CategoryFragment : Fragment() {
                 binding.tvCategory3.setTextColor(
                     ContextCompat.getColor(
                         requireContext(),
-                        R.color.white_gray
+                        R.color.gray
                     )
                 )
             }
@@ -104,7 +84,7 @@ class CategoryFragment : Fragment() {
                 binding.tvCategory4.setTextColor(
                     ContextCompat.getColor(
                         requireContext(),
-                        R.color.white_gray
+                        R.color.gray
                     )
                 )
             }
@@ -113,7 +93,7 @@ class CategoryFragment : Fragment() {
                 binding.tvCategory5.setTextColor(
                     ContextCompat.getColor(
                         requireContext(),
-                        R.color.white_gray
+                        R.color.gray
                     )
                 )
             }
@@ -122,7 +102,7 @@ class CategoryFragment : Fragment() {
                 binding.tvCategory6.setTextColor(
                     ContextCompat.getColor(
                         requireContext(),
-                        R.color.white_gray
+                        R.color.gray
                     )
                 )
             }
@@ -131,7 +111,7 @@ class CategoryFragment : Fragment() {
                 binding.tvCategory7.setTextColor(
                     ContextCompat.getColor(
                         requireContext(),
-                        R.color.white_gray
+                        R.color.gray
                     )
                 )
             }
