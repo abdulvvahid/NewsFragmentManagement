@@ -1,6 +1,8 @@
 package com.noor.newsfragmentmanagement
 
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.noor.newsfragmentmanagement.databinding.ActivityMainBinding
@@ -59,6 +61,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        animateRightToLeft()
         uploadClickListeners()
     }
 
@@ -201,6 +204,26 @@ class MainActivity : AppCompatActivity() {
             remove(detailFragment)
             commit()
         }
+    }
+
+    private fun animateRightToLeft(){
+
+        val rightToLeft: Animation = AnimationUtils.loadAnimation(this, R.anim.right_to_left)
+        binding.fragmentWriter1.startAnimation(rightToLeft)
+        binding.fragmentWriter2.startAnimation(rightToLeft)
+        binding.fragmentWriter3.startAnimation(rightToLeft)
+        binding.fragmentWriter4.startAnimation(rightToLeft)
+        binding.fragmentWriter5.startAnimation(rightToLeft)
+        binding.fragmentWriter6.startAnimation(rightToLeft)
+        binding.fragmentWriter7.startAnimation(rightToLeft)
+
+        val bottomToTop: Animation = AnimationUtils.loadAnimation(this, R.anim.bottom_to_top)
+        binding.fragmentNews1.startAnimation(bottomToTop)
+        binding.fragmentNews2.startAnimation(bottomToTop)
+        binding.fragmentNews3.startAnimation(bottomToTop)
+        binding.fragmentNews4.startAnimation(bottomToTop)
+        binding.fragmentNews5.startAnimation(bottomToTop)
+
     }
 
 }

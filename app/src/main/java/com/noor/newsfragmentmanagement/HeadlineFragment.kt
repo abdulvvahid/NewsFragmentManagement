@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
@@ -59,6 +61,9 @@ class HeadlineFragment : Fragment() {
         }
 
         binding.viewPager.setPageTransformer(compositePagerTransformer)
+
+        val rightToLeft: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.right_to_left)
+        binding.viewPager.startAnimation(rightToLeft)
 
         return binding.root
     }
