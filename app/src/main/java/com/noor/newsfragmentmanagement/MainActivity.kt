@@ -52,7 +52,8 @@ class MainActivity : AppCompatActivity() {
         "News Description5",
         "News Date 5"
     )
-    private var detailFragment: DetailFragment = DetailFragment.newInstance(R.drawable.news1, "Detail Fragment", "Detail Desc")
+    private var detailFragment: DetailFragment =
+        DetailFragment.newInstance(R.drawable.news1, "Detail Fragment", "Detail Desc")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -166,56 +167,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun animateRightToLeft(){
+    private fun animateRightToLeft() {
 
         val rightToLeft: Animation = AnimationUtils.loadAnimation(this, R.anim.right_to_left)
-        binding.fragmentWriter1.startAnimation(rightToLeft)
-        binding.fragmentWriter2.startAnimation(rightToLeft)
-        binding.fragmentWriter3.startAnimation(rightToLeft)
-        binding.fragmentWriter4.startAnimation(rightToLeft)
-        binding.fragmentWriter5.startAnimation(rightToLeft)
-        binding.fragmentWriter6.startAnimation(rightToLeft)
-        binding.fragmentWriter7.startAnimation(rightToLeft)
+        binding.apply {
+            fragmentWriter1.startAnimation(rightToLeft)
+            fragmentWriter2.startAnimation(rightToLeft)
+            fragmentWriter3.startAnimation(rightToLeft)
+            fragmentWriter4.startAnimation(rightToLeft)
+            fragmentWriter5.startAnimation(rightToLeft)
+            fragmentWriter6.startAnimation(rightToLeft)
+            fragmentWriter7.startAnimation(rightToLeft)
+        }
 
         val bottomToTop: Animation = AnimationUtils.loadAnimation(this, R.anim.bottom_to_top)
-        binding.fragmentNews1.startAnimation(bottomToTop)
-        binding.fragmentNews2.startAnimation(bottomToTop)
-        binding.fragmentNews3.startAnimation(bottomToTop)
-        binding.fragmentNews4.startAnimation(bottomToTop)
-        binding.fragmentNews5.startAnimation(bottomToTop)
-
+        binding.apply {
+            fragmentNews1.startAnimation(bottomToTop)
+            fragmentNews2.startAnimation(bottomToTop)
+            fragmentNews3.startAnimation(bottomToTop)
+            fragmentNews4.startAnimation(bottomToTop)
+            fragmentNews5.startAnimation(bottomToTop)
+        }
     }
 
     fun loadPage() {
-        val fadeOut: Animation = AnimationUtils.loadAnimation(this, R.anim.fade_out)
-        binding.fragmentWriter1.startAnimation(fadeOut)
-        binding.fragmentWriter2.startAnimation(fadeOut)
-        binding.fragmentWriter3.startAnimation(fadeOut)
-        binding.fragmentWriter4.startAnimation(fadeOut)
-        binding.fragmentWriter5.startAnimation(fadeOut)
-        binding.fragmentWriter6.startAnimation(fadeOut)
-        binding.fragmentWriter7.startAnimation(fadeOut)
-        binding.fragmentHeadline.startAnimation(fadeOut)
-        binding.fragmentNews1.startAnimation(fadeOut)
-        binding.fragmentNews2.startAnimation(fadeOut)
-        binding.fragmentNews3.startAnimation(fadeOut)
-        binding.fragmentNews4.startAnimation(fadeOut)
-        binding.fragmentNews5.startAnimation(fadeOut)
-
-        val fadeIn: Animation = AnimationUtils.loadAnimation(this, R.anim.fade_in_reload)
-        binding.fragmentWriter1.startAnimation(fadeIn)
-        binding.fragmentWriter2.startAnimation(fadeIn)
-        binding.fragmentWriter3.startAnimation(fadeIn)
-        binding.fragmentWriter4.startAnimation(fadeIn)
-        binding.fragmentWriter5.startAnimation(fadeIn)
-        binding.fragmentWriter6.startAnimation(fadeIn)
-        binding.fragmentWriter7.startAnimation(fadeIn)
-        binding.fragmentHeadline.startAnimation(fadeIn)
-        binding.fragmentNews1.startAnimation(fadeIn)
-        binding.fragmentNews2.startAnimation(fadeIn)
-        binding.fragmentNews3.startAnimation(fadeIn)
-        binding.fragmentNews4.startAnimation(fadeIn)
-        binding.fragmentNews5.startAnimation(fadeIn)
+        animateRightToLeft()
+        val rightToLeft: Animation = AnimationUtils.loadAnimation(this, R.anim.right_to_left)
+        binding.fragmentHeadline.startAnimation(rightToLeft)
     }
-
 }
