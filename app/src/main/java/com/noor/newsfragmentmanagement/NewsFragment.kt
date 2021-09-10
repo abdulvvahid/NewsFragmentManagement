@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.noor.newsfragmentmanagement.databinding.FragmentNewsBinding
-import com.noor.newsfragmentmanagement.util.Constants
 import com.noor.newsfragmentmanagement.util.Constants.Companion.NEWS_DATE
 import com.noor.newsfragmentmanagement.util.Constants.Companion.NEWS_DESC
 import com.noor.newsfragmentmanagement.util.Constants.Companion.NEWS_IMAGE
