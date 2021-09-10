@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.noor.newsfragmentmanagement.databinding.FragmentCategoryBinding
@@ -42,149 +43,57 @@ class CategoryFragment : Fragment() {
         binding.tvCategory7.categoryTextClicked(7)
     }
 
-    private fun View.categoryTextClicked(num : Int) {
-        setOnClickListener {
-            changeTextStyleNormal()
-            changeTextStyleBold(num)
-            selectedText = num
-        }
-    }
-
-    private fun changeTextStyleNormal() {
-        when (selectedText) {
-            1 -> {
-                binding.tvCategory1.typeface = Typeface.DEFAULT
-                binding.tvCategory1.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.gray
-                    )
-                )
-            }
-            2 -> {
-                binding.tvCategory2.typeface = Typeface.DEFAULT
-                binding.tvCategory2.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.gray
-                    )
-                )
-            }
-            3 -> {
-                binding.tvCategory3.typeface = Typeface.DEFAULT
-                binding.tvCategory3.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.gray
-                    )
-                )
-            }
-            4 -> {
-                binding.tvCategory4.typeface = Typeface.DEFAULT
-                binding.tvCategory4.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.gray
-                    )
-                )
-            }
-            5 -> {
-                binding.tvCategory5.typeface = Typeface.DEFAULT
-                binding.tvCategory5.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.gray
-                    )
-                )
-            }
-            6 -> {
-                binding.tvCategory6.typeface = Typeface.DEFAULT
-                binding.tvCategory6.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.gray
-                    )
-                )
-            }
-            7 -> {
-                binding.tvCategory7.typeface = Typeface.DEFAULT
-                binding.tvCategory7.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.gray
-                    )
-                )
-            }
+    private fun changeTextStyleNormal(selection: Int) {
+        when (selection) {
+            1 -> binding.tvCategory1.changeTextStyleToNormal()
+            2 -> binding.tvCategory2.changeTextStyleToNormal()
+            3 -> binding.tvCategory3.changeTextStyleToNormal()
+            4 -> binding.tvCategory4.changeTextStyleToNormal()
+            5 -> binding.tvCategory5.changeTextStyleToNormal()
+            6 -> binding.tvCategory6.changeTextStyleToNormal()
+            7 -> binding.tvCategory7.changeTextStyleToNormal()
         }
     }
 
     private fun changeTextStyleBold(selection: Int) {
         when (selection) {
-            1 -> {
-                binding.tvCategory1.typeface = Typeface.DEFAULT_BOLD
-                binding.tvCategory1.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
-                )
-            }
-            2 -> {
-                binding.tvCategory2.typeface = Typeface.DEFAULT_BOLD
-                binding.tvCategory2.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
-                )
-            }
-            3 -> {
-                binding.tvCategory3.typeface = Typeface.DEFAULT_BOLD
-                binding.tvCategory3.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
-                )
-            }
-            4 -> {
-                binding.tvCategory4.typeface = Typeface.DEFAULT_BOLD
-                binding.tvCategory4.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
-                )
-            }
-            5 -> {
-                binding.tvCategory5.typeface = Typeface.DEFAULT_BOLD
-                binding.tvCategory5.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
-                )
-            }
-            6 -> {
-                binding.tvCategory6.typeface = Typeface.DEFAULT_BOLD
-                binding.tvCategory6.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
-                )
-            }
-            7 -> {
-                binding.tvCategory7.typeface = Typeface.DEFAULT_BOLD
-                binding.tvCategory7.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
-                )
-            }
+            1 -> binding.tvCategory1.changeTextStyleToBold()
+            2 -> binding.tvCategory2.changeTextStyleToBold()
+            3 -> binding.tvCategory3.changeTextStyleToBold()
+            4 -> binding.tvCategory4.changeTextStyleToBold()
+            5 -> binding.tvCategory5.changeTextStyleToBold()
+            6 -> binding.tvCategory6.changeTextStyleToBold()
+            7 -> binding.tvCategory7.changeTextStyleToBold()
         }
         loadPage()
+    }
+
+    private fun View.categoryTextClicked(num: Int) {
+        setOnClickListener {
+            changeTextStyleNormal(selectedText)
+            changeTextStyleBold(num)
+            selectedText = num
+        }
+    }
+
+    private fun TextView.changeTextStyleToNormal() {
+        typeface = Typeface.DEFAULT
+        setTextColor(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.gray
+            )
+        )
+    }
+
+    private fun TextView.changeTextStyleToBold() {
+        typeface = Typeface.DEFAULT_BOLD
+        setTextColor(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.black
+            )
+        )
     }
 
     private fun loadPage() {
