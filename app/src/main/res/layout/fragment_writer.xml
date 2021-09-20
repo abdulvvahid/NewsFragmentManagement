@@ -12,7 +12,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
-        tools:context=".WriterFragment">
+        tools:context=".view.WriterFragment">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"

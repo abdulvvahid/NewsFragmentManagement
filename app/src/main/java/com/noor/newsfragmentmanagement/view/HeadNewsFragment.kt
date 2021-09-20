@@ -1,4 +1,4 @@
-package com.noor.newsfragmentmanagement
+package com.noor.newsfragmentmanagement.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -34,8 +34,8 @@ class HeadNewsFragment : Fragment() {
         binding = FragmentHeadNewsBinding.inflate(layoutInflater, container, false)
 
         binding.apply {
-            ivHeadNews.setImageResource(imageId!!)
-            tvHeadNews.text = titleText
+            title = titleText
+            imageRes = imageId
             ivHeadNews.setOnClickListener {
                 val detailFragment = DetailFragment.newInstance(imageId!!, titleText!!, titleDesc!!)
                 (activity as MainActivity).loadDetail(detailFragment)

@@ -3,7 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data />
+    <data>
+        <variable
+            name="imageRes"
+            type="Integer" />
+        <variable
+            name="title_xml"
+            type="String" />
+        <variable
+            name="desc_xml"
+            type="String" />
+        <variable
+            name="date_xml"
+            type="String" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,10 +25,11 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/bg_news"
         android:orientation="horizontal"
-        tools:context=".NewsFragment">
+        tools:context=".view.NewsFragment">
 
         <ImageView
             android:id="@+id/iv_news"
+            setImage="@{imageRes}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_news_image"
@@ -30,11 +44,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:text="@string/news_title"
+            android:text="@{title_xml}"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/iv_news"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/news_title" />
 
         <TextView
             android:id="@+id/tv_news_desc"
@@ -44,9 +59,10 @@
             android:layout_marginTop="5dp"
             android:ellipsize="end"
             android:maxLines="3"
-            android:text="@string/news_description"
+            android:text="@{desc_xml}"
             app:layout_constraintStart_toEndOf="@+id/iv_news"
-            app:layout_constraintTop_toBottomOf="@+id/tv_news_title" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_news_title"
+            tools:text="@string/news_description" />
 
         <TextView
             android:id="@+id/tv_news_date"
@@ -54,10 +70,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/date"
+            android:text="@{date_xml}"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_news" />
+            app:layout_constraintStart_toEndOf="@+id/iv_news"
+            tools:text="@string/date" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

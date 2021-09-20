@@ -1,4 +1,4 @@
-package com.noor.newsfragmentmanagement
+package com.noor.newsfragmentmanagement.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -33,9 +33,9 @@ class DetailFragment : Fragment() {
     ): View {
         binding = FragmentDetailBinding.inflate(layoutInflater, container, false)
 
-        binding.ivDetail.setImageResource(imageId!!)
-        binding.tvDetailNewsTitle.text = textTitle
-        binding.tvDetailNewsDesc.text = textDesc
+        binding.imageRes = imageId
+        binding.title = textTitle
+        binding.desc = textDesc
 
         binding.ivIconBack.setOnClickListener {
             (activity as MainActivity).loadHome(this)

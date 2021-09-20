@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:orientation="horizontal"
-            tools:context=".CategoryFragment">
+            tools:context=".view.CategoryFragment">
 
             <TextView
                 android:id="@+id/tv_category1"

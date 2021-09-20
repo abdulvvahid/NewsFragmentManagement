@@ -1,4 +1,4 @@
-package com.noor.newsfragmentmanagement
+package com.noor.newsfragmentmanagement.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -36,10 +36,12 @@ class NewsFragment : Fragment() {
     ): View {
         binding = FragmentNewsBinding.inflate(layoutInflater, container, false)
 
-        binding.ivNews.setImageResource(imageId!!)
-        binding.tvNewsTitle.text = title
-        binding.tvNewsDesc.text = desc
-        binding.tvNewsDate.text = date
+        binding.apply {
+            imageRes = imageId
+            titleXml = title
+            descXml = desc
+            dateXml = date
+        }
 
         return binding.root
     }

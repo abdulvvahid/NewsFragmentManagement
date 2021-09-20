@@ -9,6 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:paddingHorizontal="50dp"
-        tools:context=".HeadlineFragment" />
+        tools:context=".view.HeadlineFragment" />
 
 </layout>

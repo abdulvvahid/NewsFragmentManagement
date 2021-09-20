@@ -1,4 +1,4 @@
-package com.noor.newsfragmentmanagement
+package com.noor.newsfragmentmanagement.view
 
 import android.graphics.Typeface
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.noor.newsfragmentmanagement.R
 import com.noor.newsfragmentmanagement.databinding.FragmentCategoryBinding
 
 var selectedText = 1

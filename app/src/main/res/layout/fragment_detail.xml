@@ -3,13 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data />
+    <data>
+
+        <variable
+            name="imageRes"
+            type="Integer" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="desc"
+            type="String" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".DetailFragment">
+        tools:context=".view.DetailFragment">
 
         <ImageView
             android:id="@+id/iv_detail"
@@ -17,20 +30,21 @@
             android:layout_height="300dp"
             android:contentDescription="@string/detailed_image_view"
             android:scaleType="centerCrop"
-            android:src="@drawable/rectangle1"
+            setImage="@{imageRes}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/rectangle1" />
 
         <ImageView
             android:id="@+id/iv_icon_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
+            android:contentDescription="@string/go_back_to_home_screen"
             android:src="@drawable/ic_arrow_back"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/go_back_to_home_screen" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_detail_news_title"
@@ -38,12 +52,13 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:text="@string/news_title"
-            android:textSize="20sp"
+            android:text="@{title}"
             android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_detail" />
+            app:layout_constraintTop_toBottomOf="@+id/iv_detail"
+            tools:text="@string/news_title" />
 
         <TextView
             android:id="@+id/tv_detail_news_desc"
@@ -51,10 +66,11 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:text="@string/news_desc"
+            android:text="@{desc}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_detail_news_title" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_news_title"
+            tools:text="@string/news_desc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

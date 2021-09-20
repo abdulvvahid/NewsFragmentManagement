@@ -1,4 +1,4 @@
-package com.noor.newsfragmentmanagement
+package com.noor.newsfragmentmanagement.view
 
 import android.os.Bundle
 import android.view.LayoutInflater

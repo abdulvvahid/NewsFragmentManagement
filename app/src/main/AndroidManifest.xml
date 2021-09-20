@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsFragment">
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".view.SplashScreenActivity"
             android:theme="@style/SplashTheme"
             android:exported="true" >
             <intent-filter>
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
         </activity>
     </application>

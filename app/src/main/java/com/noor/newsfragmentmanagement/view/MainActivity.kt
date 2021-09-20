@@ -1,4 +1,4 @@
-package com.noor.newsfragmentmanagement
+package com.noor.newsfragmentmanagement.view
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.noor.newsfragmentmanagement.R
 import com.noor.newsfragmentmanagement.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

@@ -3,15 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data />
+    <data>
+
+        <variable
+            name="imageRes"
+            type="Integer" />
+
+        <variable
+            name="title"
+            type="String" />
+    </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HeadNewsFragment">
+        tools:context=".view.HeadNewsFragment">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/iv_head_news"
+            setImage="@{imageRes}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -30,10 +40,11 @@
             android:background="#40000000"
             android:gravity="bottom"
             android:padding="2dp"
-            android:textStyle="bold"
+            android:text="@{title}"
+            android:textColor="@color/white"
             android:textSize="20sp"
-            android:text="@string/news_title"
-            android:textColor="@color/white" />
+            android:textStyle="bold"
+            tools:text="@string/news_title" />
 
     </RelativeLayout>
 </layout>

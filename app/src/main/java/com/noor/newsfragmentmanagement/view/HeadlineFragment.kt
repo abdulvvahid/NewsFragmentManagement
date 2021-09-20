@@ -1,4 +1,4 @@
-package com.noor.newsfragmentmanagement
+package com.noor.newsfragmentmanagement.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
+import com.noor.newsfragmentmanagement.R
 import com.noor.newsfragmentmanagement.adapter.SliderAdapter
 import com.noor.newsfragmentmanagement.databinding.FragmentHeadlineBinding
 import kotlin.math.abs
@@ -62,7 +63,9 @@ class HeadlineFragment : Fragment() {
 
         binding.viewPager.setPageTransformer(compositePagerTransformer)
 
-        val rightToLeft: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.right_to_left)
+        val rightToLeft: Animation = AnimationUtils.loadAnimation(requireContext(),
+            R.anim.right_to_left
+        )
         binding.viewPager.startAnimation(rightToLeft)
 
         return binding.root
